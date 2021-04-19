@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gif GifOS Gif</title>
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/general-style.css">
+    <link id="styleSheet" rel="stylesheet" href="./assets/styles/day-style.css">
+    <link rel="stylesheet" href="./assets/styles/night-style.css">
+    <script src="https://kit.fontawesome.com/47d55fd055.js" crossorigin="anonymous"></script>
+</head>
+
+<body data-theme="light">
+
+    <header>
+        <p>¡Bienvenidos/as a Guifos.com! ------Donde los gifs están.////// Número de visitas 12.765.803</p>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="./index.html">
+                <div class="logo"></div>
+            </a>
+            <div class="nav-button">
+                <div class="guifos">
+                    <a href="./my-gifos.html" onclick="goToCreateGuifos(event, this);">Crear Guifos</a>
+                </div>
+                <button class="theme" onclick="toggleButton();">
+                    <span class="button-container">
+                        <span class="button-text">Elegir Tema</span>
+                        <span class="icon"><img src="./assets/img/dropdown.svg" alt="Dropdown arrow"></span>
+                    </span>
+
+                    <span id="theme">
+                        <span id="sailor-day" onclick="changeCSS('sailorDay', event);"><u>S</u>ailor Day</span>
+                        <span id="sailor-night" onclick="changeCSS('sailorNight', event);"><u>S</u>ailor Night</span>
+                    </span>
+                </button>
+                <a class="my-guifos" href="./my-gifos.html"><u>M</u>is Guifos</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="search-box">
+        <div class="container">
+            <div class="box">
+                <div class="bar">Buscar</div>
+                <div class="search-container">
+                    <input type="text" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
+                        oninput="onSearchInputChange();" onkeydown="onSearchInputKeydown(event)">
+                    <button id="search" type="button" class="search-button" onclick="prepareSearch()">
+                        <img src="#" alt="Lupa Inactive">
+                        Buscar
+                    </button>
+                </div>
+            </div>
+            <div class="search-suggestions box hidden"></div>
+        </div>
+        <div id="showHashtags">
+
+        </div>
+    </section>
+
+    <section class="suggestions">
+        <div class="container">
+            <input type="text" placeholder="Hoy te sugerimos:" disabled>
+            <div class="gif-grid">
+                <div class="gif-box">
+                    <div class="bar">
+                        <p></p>
+                        <button class="close-button" onclick="reloadRandomGif(event)"><img
+                                src="./assets/img/button_close.svg" alt="Close button"></button>
+                    </div>
+                    <div class="gif-container">
+                        <img src="#" alt="Suggested GIF">
+                        <button class="see-more" onclick="seeMore(event)">Ver más...</button>
+                    </div>
+                </div>
+                <div class="gif-box">
+                    <div class="bar">
+                        <p></p>
+                        <button class="close-button" onclick="reloadRandomGif(event)"><img
+                                src="./assets/img/button_close.svg" alt="Close button"></button>
+                    </div>
+                    <div class="gif-container">
+                        <img src="#" alt="Suggested GIF">
+                        <button class="see-more" onclick="seeMore(event)">Ver más...</button>
+                    </div>
+                </div>
+                <div class="gif-box">
+                    <div class="bar">
+                        <p></p>
+                        <button class="close-button" onclick="reloadRandomGif(event)"><img
+                                src="./assets/img/button_close.svg" alt="Close button"></button>
+                    </div>
+                    <div class="gif-container">
+                        <img src="#" alt="Suggested GIF">
+                        <button class="see-more" onclick="seeMore(event)">Ver más...</button>
+                    </div>
+                </div>
+                <div class="gif-box">
+                    <div class="bar">
+                        <p></p>
+                        <button class="close-button" onclick="reloadRandomGif(event)"><img
+                                src="./assets/img/button_close.svg" alt="Close button"></button>
+                    </div>
+                    <div class="gif-container">
+                        <img src="#" alt="Suggested GIF">
+                        <button class="see-more" onclick="seeMore(event)">Ver más...</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trends">
+        <div class="container">
+            <input type="text" placeholder="Tendencias:" disabled>
+            <div class="gif-grid"></div>
+        </div>
+    </section>
+
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/local-storage.js"></script>
+
+</body>
+
+</html>
